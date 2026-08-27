@@ -1,0 +1,10 @@
+{
+  "nombre_sistema": "ASHB OS",
+  "tema_predeterminado": "Modo Oscuro",
+  "paleta_colores": {
+    "color_fondo": "#121212",
+    "color_barra_notificaciones": "#000000",
+    "color_texto_principal": "#FFFFFF",
+    "color_acentos_botones": "#007ACC"
+  }
+}

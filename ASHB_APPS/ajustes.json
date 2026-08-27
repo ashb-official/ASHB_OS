@@ -1,0 +1,9 @@
+{
+  "nombre_app": "ASHB Ajustes",
+  "paquete": "com.ashb.ajustes",
+  "opciones_disponibles": {
+    "1": "Cambiar Tema (Modo Claro / Modo Oscuro)",
+    "2": "Modificar Límite de Batería Maxima",
+    "3": "Ver Información del Sistema ASHB OS"
+  }
+}

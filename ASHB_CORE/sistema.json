@@ -1,0 +1,11 @@
+{
+  "modulo": "ASHB Core",
+  "configuracion_bateria": {
+    "modo_ahorro_energia": "automatico",
+    "limite_carga_maxima": 90
+  },
+  "seguridad": {
+    "encriptacion_datos": "AES-256",
+    "verificacion_arranque": "activa"
+  }
+}

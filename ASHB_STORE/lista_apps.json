@@ -1,0 +1,16 @@
+{
+  "tienda": "ASHB Store",
+  "version_sistema": "1.0.0",
+  "aplicaciones_disponibles": [
+    {
+      "nombre": "ASHB Calculadora",
+      "version": "1.0",
+      "tipo_archivo": ".apk"
+    },
+    {
+      "nombre": "ASHB Ajustes",
+      "version": "1.0",
+      "tipo_archivo": ".apk"
+    }
+  ]
+}

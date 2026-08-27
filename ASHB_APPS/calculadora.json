@@ -1,0 +1,13 @@
+{
+  "nombre_app": "ASHB Calculadora",
+  "paquete": "com.ashb.calculadora",
+  "permisos": {
+    "acceso_internet": false,
+    "acceso_almacenamiento": true
+  },
+  "interfaz": {
+    "estilo_botones": "redondeado",
+    "color_numeros": "#FFFFFF",
+    "color_operadores": "#007ACC"
+  }
+}
