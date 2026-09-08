@@ -5,12 +5,12 @@
     {
       "nombre": "ASHB Calculadora",
       "version": "1.0",
-      "tipo_archivo": ".apk"
+      "tipo_archivo": ".py"
     },
     {
       "nombre": "ASHB Ajustes",
       "version": "1.0",
-      "tipo_archivo": ".apk"
+      "tipo_archivo": ".py"
     }
   ]
 }
