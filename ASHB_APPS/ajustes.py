@@ -1,62 +1,67 @@
 import json
+import time
 from pathlib import Path
 from ASHB_CORE.api import AshbApp
 
 class AjustesApp(AshbApp):
-    """
-    Aplicación ejecutable de Ajustes que lee la configuración desde ajustes.json
-    """
-    
     @staticmethod
     def get_metadata() -> dict:
-        return {
-            "nombre": "ASHB Ajustes",
-            "version": "1.0.0",
-            "descripcion": "Panel de control y configuración del sistema"
-        }
+        return {"nombre": "ASHB Ajustes del sistema", "version": "1.0.0", "descripcion": "Panel de control"}
 
     def setup(self) -> None:
-        print(" [*] Iniciando el panel de control...")
-        self.config = {}
-        # Apuntamos específicamente al archivo JSON de ajustes
-        json_path = Path("APLICACIONES ASHB/ajustes.json")
-        
         try:
-            if json_path.exists():
-                with open(json_path, 'r', encoding='utf-8') as f:
-                    self.config = json.load(f)
-                self.logger.info("Archivo ajustes.json cargado correctamente.")
-            else:
-                self.logger.warning("No se encontró ajustes.json, el sistema usará configuraciones por defecto.")
-        except Exception as e:
-            self.logger.error(f"Error al leer ajustes.json: {e}")
+            with open('APLICACIONES ASHB/ajustes.json', 'r') as f:
+                self.config_app = json.load(f)
+            print(f"\n[ASHB APPS] Abriendo: {self.config_app.get('nombre_app', 'Ajustes')}...")
+        except FileNotFoundError:
+            print("\n[ERROR] Archivos de configuración de ajustes no encontrados.")
 
     def run(self) -> None:
-        # Aquí leemos valores hipotéticos que vendrían en tu ajustes.json real
-        # Si el JSON no los tiene, usamos un valor por defecto (como "Oscuro" o "Español")
-        tema_actual = self.config.get("tema_visual", "Oscuro")
-        idioma_actual = self.config.get("idioma", "Español")
-
-        print("\n=== ⚙️ AJUSTES DE ASHB_OS ===")
-        print(f" [Tema del Sistema: {tema_actual}]")
-        print(f" [Idioma del Sistema: {idioma_actual}]")
-        print("-----------------------------")
-        print(" 1. Modificar Tema")
-        print(" 2. Modificar Idioma")
-        print(" 0. Volver al Escritorio")
-        
-        # Bucle interno de la aplicación de Ajustes
         while True:
-            opcion = input(" Seleccione una configuración a editar > ")
-            if opcion == '0':
+            print("\n-----------------------------------------")
+            print("            ASHB SETTINGS MENU           ")
+            print("-----------------------------------------")
+            print("1. Cambiar Tema (Luz/Oscuro)")
+            print("2. Modificar Límite de Batería")
+            print("3. Ver Info del Sistema")
+            print("4. Salir al Menú de ASHB OS")
+            print("-----------------------------------------")
+            opcion = input("Seleccione una opción (1-4): ")
+            
+            if opcion == '4':
+                print("\nGuardando cambios en el sistema...")
                 break
+                
             elif opcion == '1':
-                print(" -> Función de cambio de tema en desarrollo...")
+                try:
+                    with open('ASHB_UI/colores.json', 'r') as f: ui = json.load(f)
+                    nuevo_tema = "Modo Claro" if ui['tema_predeterminado'] == "Modo Oscuro" else "Modo Oscuro"
+                    ui['tema_predeterminado'] = nuevo_tema
+                    with open('ASHB_UI/colores.json', 'w') as f: json.dump(ui, f, indent=2)
+                    print(f"\n⚙️ SISTEMA: Tema modificado con éxito a: [{nuevo_tema}]")
+                except Exception: print("\n❌ Error al modificar la interfaz.")
+                
             elif opcion == '2':
-                print(" -> Función de cambio de idioma en desarrollo...")
-            else:
-                print(" Opción no válida.")
+                try:
+                    with open('ASHB_CORE/sistema.json', 'r') as f: core = json.load(f)
+                    nuevo_limite = int(input("Ingrese el nuevo límite de carga (50-100): "))
+                    if 50 <= nuevo_limite <= 100:
+                        core['configuracion_bateria']['limite_carga_maxima'] = nuevo_limite
+                        with open('ASHB_CORE/sistema.json', 'w') as f: json.dump(core, f, indent=2)
+                        print(f"\n⚙️ NÚCLEO: Nuevo límite guardado a un: {nuevo_limite}%")
+                    else: print("\n❌ RANGO INVÁLIDO: Use un valor entre 50 y 100.")
+                except ValueError: print("\n❌ ERROR: Ingrese un número entero válido.")
+                
+            elif opcion == '3':
+                print("\n=========================================")
+                print("         INFORMACIÓN DE ASHB OS          ")
+                print("=========================================")
+                print("Desarrollador Principal: sharp")
+                print("Arquitectura: Linux Virtual Kernel (WSL)")
+                print("Estado de Licencia: Código Abierto AOSP")
+                print("=========================================")
+                
+            time.sleep(1)
 
     def cleanup(self) -> None:
-        print(" [*] Guardando nuevas configuraciones del sistema...")
-        self.logger.info("Módulo de Ajustes cerrado de forma segura.")
+        pass
