@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ashb-oficial.github.io/ASHB_OS/sitemap.xml
+Sitemap: https://ashb-official.github.io/ASHB_OS/sitemap.xml
