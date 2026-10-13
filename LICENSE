@@ -1,52 +1,104 @@
 =======================================================================
-LICENCIAS DEL ECOSISTEMA ASHB OS
-Copyright (C) 2026 Gabriel Alexander Sharp Brizuela
+ACUERDO DE LICENCIA DE USUARIO FINAL Y TÉRMINOS DEL ECOSISTEMA CYGNUS OS
+Copyright (C) 2026 Gabriel Alexander Sharp Brizuela. 
+Todos los derechos reservados sobre los componentes propietarios.
 =======================================================================
 
-Este proyecto utiliza un modelo de arquitectura legal híbrida y estricta, 
-diseñado para entornos corporativos (B2B) y despliegue en producción. 
-Dependiendo del componente, aplican diferentes términos legales:
+El presente documento establece el modelo de arquitectura legal híbrida 
+que rige la distribución, uso y comercialización del sistema operativo 
+Cygnus OS. Este modelo está diseñado para facilitar la adopción masiva 
+(Freemium/Beta Abierta) protegiendo simultáneamente los secretos 
+comerciales en entornos corporativos (B2B) y de fabricación (OEM).
 
+Dependiendo de la capa del sistema y el componente específico, aplican 
+diferentes términos legales detallados a continuación:
+
+-----------------------------------------------------------------------
 1. NÚCLEO Y SISTEMA BASE (Apache License 2.0)
-El código fuente de la arquitectura base de AOSP, el orquestador raíz y 
-los componentes de integración genéricos se distribuyen bajo la licencia 
-permisiva Apache 2.0. Se permite su uso, modificación y distribución.
+-----------------------------------------------------------------------
+El código fuente de la arquitectura base derivada de AOSP (Android Open 
+Source Project), el orquestador raíz y los componentes de integración 
+genéricos del sistema se distribuyen bajo la licencia permisiva 
+Apache License, Versión 2.0. 
 
-2. MÓDULOS CORE Y PROPIEDAD INTELECTUAL (ASHB Proprietary - Código Cerrado)
-Las siguientes 12 funciones de desarrollo propio representan propiedad 
-intelectual exclusiva y secretos comerciales del autor. Quedan ESTRICTAMENTE 
-excluidas de cualquier licencia de código abierto (incluyendo, pero no 
-limitado a, Apache, GPL o MIT):
+Se permite su uso, modificación, distribución y sublicenciamiento 
+única y estrictamente conforme a los términos y condiciones de dicha 
+licencia, cuyo texto íntegro se adjunta al final de este documento.
 
-  - ACE Engine
+-----------------------------------------------------------------------
+2. MÓDULOS CORE "DEEP TECH" Y PROPIEDAD INTELECTUAL 
+   (ASHB Proprietary - Código Cerrado)
+-----------------------------------------------------------------------
+Los siguientes módulos estratégicos y motores de rendimiento son de 
+desarrollo propio, representan propiedad intelectual exclusiva y secretos 
+comerciales del autor (Gabriel Alexander Sharp Brizuela). Quedan 
+ESTRICTAMENTE excluidos de cualquier licencia de código abierto 
+(incluyendo Apache, GPL, MIT, entre otras):
+
+  - Motor ACE (Advanced Core Engine)
+  - Cygnus Privacy Shield
   - Adaptive Hardware Classifier (AHC)
   - Battery Guard
   - Game Turbo
   - Machine Explorer
-  - Microaislamiento y Políticas Zero-Trust
-  - AOT Wrappers
-  - OTA (Over-The-Air Update Engine)
+  - Módulos de Microaislamiento y Políticas Zero-Trust
+  - AOT Wrappers (Optimizador Ahead-Of-Time)
+  - OTA Engine (Over-The-Air Update Engine)
   - ASHB Blackbox (Auditoría Forense)
   - SystemUI y Settings Avanzados Propietarios
 
 El código fuente de estos componentes NO es público. Se distribuyen en 
 el ecosistema única y exclusivamente como binarios compilados y ofuscados 
-(archivos ejecutables y bibliotecas compartidas .so) alojados en la 
-partición `/system_ext`. Queda terminantemente prohibida la ingeniería 
-inversa, descompilación, modificación o redistribución comercial de estos 
-módulos sin un acuerdo formal de licencias y regalías con el autor.
+(archivos ejecutables y bibliotecas compartidas .so) alojados de forma 
+segura en la partición `/system_ext` u otras particiones protegidas.
 
-3. CAPA DE ADAPTACIÓN DE CHIPS (Vendor)
-Los controladores de hardware, firmware base y "vendor blobs" ubicados 
-en la partición `/vendor` pertenecen a sus respectivos fabricantes de 
-silicio y se distribuyen bajo los términos de licencia dictados por dichas 
-entidades.
+2.1. Derechos del Usuario Final (Uso No Comercial y Beta Abierta):
+Se otorga a los usuarios finales (consumidores) una licencia limitada, 
+no exclusiva, intransferible, revocable y gratuita para la instalación, 
+ejecución y uso personal de estos módulos, única y exclusivamente como 
+parte integral e inseparable del sistema operativo Cygnus OS en sus 
+dispositivos personales.
 
-A continuación, se adjunta el texto legal de la licencia Apache 2.0 que 
-rige EXCLUSIVAMENTE los componentes descritos en la Sección 1.
+2.2. Restricciones Estrictas de Propiedad (B2B y OEM):
+Bajo ninguna circunstancia esta licencia otorga derechos de explotación 
+comercial. Queda terminantemente prohibido:
+  a) La extracción, clonación o separación de los módulos de la partición 
+     `/system_ext` para su uso en hardware de terceros, otras ROMs o 
+     sistemas operativos derivados.
+  b) La ingeniería inversa, descompilación, desensamblaje o intentos de 
+     acceso al código fuente de los binarios protegidos.
+  c) La preinstalación (OEM), redistribución corporativa, sublicenciamiento 
+     o comercialización de Cygnus OS o sus módulos sin un acuerdo formal 
+     de licencias (Licensing) y regalías (Royalties) firmado por escrito 
+     con el autor.
+
+-----------------------------------------------------------------------
+3. CAPA DE ADAPTACIÓN DE CHIPS Y HARDWARE (Vendor Layer)
+-----------------------------------------------------------------------
+Los controladores de hardware, firmware base, bibliotecas HAL (Hardware 
+Abstraction Layer) y "vendor blobs" ubicados habitualmente en las 
+particiones `/vendor` o `/odm` pertenecen a sus respectivos fabricantes 
+de silicio (ej. Qualcomm, MediaTek, etc.) o fabricantes del dispositivo. 
+Cygnus OS no reclama propiedad sobre ellos; estos se distribuyen bajo 
+los términos de licencia dictados por dichas entidades (EULAs propietarios 
+de terceros).
+
+-----------------------------------------------------------------------
+4. EXENCIÓN DE RESPONSABILIDAD (Disclaimer of Warranty)
+-----------------------------------------------------------------------
+EL SOFTWARE (INCLUYENDO LAS VERSIONES DE BETA ABIERTA) SE PROPORCIONA 
+"TAL CUAL" (AS IS), SIN GARANTÍA DE NINGÚN TIPO, EXPRESA O IMPLÍCITA, 
+INCLUYENDO PERO NO LIMITADO A GARANTÍAS DE COMERCIALIZACIÓN, IDONEIDAD 
+PARA UN PROPÓSITO PARTICULAR Y NO INFRACCIÓN. EN NINGÚN CASO EL AUTOR 
+O LOS TITULARES DEL COPYRIGHT SERÁN RESPONSABLES POR CUALQUIER RECLAMO, 
+DAÑO, PÉRDIDA DE DATOS O RESPONSABILIDAD, YA SEA EN UNA ACCIÓN DE 
+CONTRATO, AGRAVIO O CUALQUIER OTRO MOTIVO, QUE SURJA DE O EN CONEXIÓN 
+CON EL SOFTWARE O EL USO U OTROS TRATOS EN EL SOFTWARE.
+
 
 =======================================================================
-TEXTO DE LA LICENCIA APACHE 2.0 (Aplica solo a la Base del Sistema)
+APÉNDICE: TEXTO DE LA LICENCIA APACHE 2.0 
+(Aplica SOLO a los componentes descritos en la Sección 1)
 =======================================================================
 
                                  Apache License
