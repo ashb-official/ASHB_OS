@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/logo-640.png" width="260" alt="Logotipo de Cygnus OS">
+  <img src="assets/readme-banner.png" width="100%" alt="Logotipo de Cygnus OS sobre fondo azul oscuro">
 </p>
 
 # Cygnus OS
