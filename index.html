@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#050914">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <title>Cygnus OS | El Futuro del Rendimiento y Privacidad Móvil</title>
-  <meta name="description" content="Cygnus OS es un sistema operativo móvil de arquitectura avanzada: compilación AOT, aislamiento sandboxed y 60fps constantes. Descubre nuestra tecnología y visión comercial.">
+  <meta name="description" content="Cygnus OS es un sistema operativo móvil basado en AOSP 13, desarrollado en Paraguay: servicios propios sin root, seguridad SELinux de mínimo privilegio y herramientas de rendimiento y batería integradas. Beta pública prevista para marzo de 2027.">
   <link rel="canonical" href="https://ashb-official.github.io/Cygnus_OS/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_PY">
@@ -22,7 +22,8 @@
   <meta name="twitter:title" content="Cygnus OS | Rendimiento y Privacidad por Diseño">
   <meta name="twitter:description" content="Una nueva propuesta de sistema operativo móvil Deep Tech. En desarrollo avanzado; beta prevista para marzo de 2027.">
   <meta name="twitter:image" content="https://ashb-official.github.io/Cygnus_OS/cygnus-social.png">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23050a17'/%3E%3Ccircle cx='32' cy='32' r='20' fill='none' stroke='%233ccaff' stroke-width='7'/%3E%3C/svg%3E">
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Cygnus OS","url":"https://ashb-official.github.io/Cygnus_OS/","publisher":{"@type":"Organization","name":"ASHB Technology"}}</script>
   <style>
     :root { color-scheme:dark; --bg:#050914; --panel:#0a1324; --panel2:#0d1b30; --line:rgba(106,164,219,.19); --text:#f3f8ff; --muted:#a5b7cf; --blue:#47a9ff; --cyan:#67e7f8; --violet:#7476ff; }
@@ -115,17 +116,17 @@
   </header>
   <main id="inicio">
     <section class="hero wrap" aria-labelledby="headline">
-      <img class="hero-logo" src="assets/logo.png" width="1254" height="1254" alt="Logotipo oficial transparente de Cygnus OS, anillo azul cian y tipografía plateada" fetchpriority="high">
+      <img class="hero-logo" src="assets/logo-640.png" width="640" height="640" alt="Logotipo oficial transparente de Cygnus OS, anillo azul cian y tipografía plateada" fetchpriority="high">
       <div class="eyebrow">Deep Tech · Sistemas operativos · ASHB Technology</div>
       <h1 id="headline">Cygnus OS: <span class="gradient">Rendimiento sin compromisos</span> y Privacidad por Diseño.</h1>
-      <p class="sublead">Arquitectura móvil Deep Tech basada en compilación AOT, aislamiento avanzado y una experiencia visual diseñada para una fluidez sostenida. Una alternativa que busca desafiar el statu quo del mercado móvil.</p>
+      <p class="sublead">Sistema operativo móvil basado en AOSP 13, con servicios propios sin privilegios de root, seguridad de mínimo privilegio y herramientas de rendimiento y batería integradas en el sistema. Una alternativa que busca desafiar el statu quo del mercado móvil.</p>
       <div class="actions">
         <a href="docs/Cygnus_OS_Pitch_Deck_2026.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary">Ver Pitch Deck (PDF)</a>
         <a class="btn secondary" href="#tecnologias">Ver Arquitectura Técnica →</a>
       </div>
       <p class="notice">Las metas de fluidez, tiempos de carga y ahorro energético requieren validación cuantitativa; no son garantías actuales.</p>
       <div class="hero-metrics" aria-label="Información del proyecto">
-        <div class="metric"><span>Estado actual</span><strong>Desarrollo muy avanzado</strong><small>Integración y pruebas en curso</small></div>
+        <div class="metric"><span>Estado actual</span><strong>8 de 22 módulos validados</strong><small>En emulador; integración y pruebas en curso</small></div>
         <div class="metric"><span>Beta abierta prevista</span><strong>Marzo de 2027</strong><small>Objetivo: segunda quincena de marzo, sujeto a validación</small></div>
         <div class="metric"><span>Modelo de crecimiento</span><strong>Comunidad + licencias</strong><small>Acceso beta gratuito y motores propietarios</small></div>
       </div>
@@ -147,16 +148,16 @@
       <div class="wrap">
         <div class="kicker">02 / Ventaja tecnológica</div>
         <h2 id="tech-titulo">Un núcleo técnico con potencial de diferenciación.</h2>
-        <p class="intro">La propuesta combina arquitectura de ejecución, aislamiento, aceleración gráfica y gestión adaptativa de recursos. Los beneficios comerciales indicados son hipótesis que deberán verificarse con pruebas repetibles.</p>
+        <p class="intro">La propuesta combina servicios propios sin root, seguridad de mínimo privilegio y gestión adaptativa del rendimiento y la batería. Los beneficios comerciales indicados son hipótesis que deberán verificarse con pruebas repetibles.</p>
         <div class="tech-grid">
-          <article class="tech"><div class="symbol">⚙</div><h3>Compilación AOT</h3><p>Compilación anticipada de componentes seleccionados y wrappers nativos para reducir sobrecargas en rutas críticas.</p><div class="benefit">Valor esperado: tiempos de carga más cortos y menor consumo de recursos, al reducir determinados cuellos de botella.</div></article>
-          <article class="tech"><div class="symbol">◇</div><h3>Aislamiento Sandboxed</h3><p>Separación de procesos y permisos, con una orientación de seguridad Zero Trust y límites explícitos entre componentes.</p><div class="benefit">Valor esperado: mayor protección de datos corporativos y personales, con controles auditables; ningún aislamiento ofrece seguridad absoluta.</div></article>
-          <article class="tech"><div class="symbol">◈</div><h3>Vulkan Ready · Objetivo 60 fps</h3><p>Camino gráfico preparado para aceleración donde el dispositivo y sus controladores sean compatibles.</p><div class="benefit">Valor esperado: experiencia visual fluida en hardware compatible, con medición de estabilidad y rendimiento sostenido.</div></article>
+          <article class="tech"><div class="symbol">⚙</div><h3>Servicios sin root</h3><p>Cada función corre como un servicio propio, en su propio proceso y sin privilegios de root, y solo atiende a clientes autorizados por firma.</p><div class="benefit">Valor: menor superficie de ataque; un fallo en un servicio no compromete al resto del sistema.</div></article>
+          <article class="tech"><div class="symbol">◇</div><h3>SELinux de mínimo privilegio</h3><p>Política SELinux estricta para cada servicio propio: acceso solo a lo que necesita, sin modos permisivos ni permisos amplios.</p><div class="benefit">Valor esperado: mayor protección de datos corporativos y personales, con controles auditables; ningún aislamiento ofrece seguridad absoluta.</div></article>
+          <article class="tech"><div class="symbol">◈</div><h3>Game Turbo</h3><p>Sesiones de juego con un perfil de rendimiento dedicado que se cierra solo al terminar el juego. Validado en emulador.</p><div class="benefit">Valor esperado: rendimiento sostenido en juegos, sujeto a mediciones en hardware real.</div></article>
           <article class="tech"><div class="symbol">◎</div><h3>Motor ACE 0.1</h3><p>Supervisión de hardware, consumo energético, carga de juegos y temperatura. La coordinación avanzada pertenece a versiones futuras.</p><div class="benefit">Valor esperado: capa diferenciadora de optimización adaptable susceptible de licenciamiento propio.</div></article>
-          <article class="tech"><div class="symbol">▦</div><h3>AHC + Battery Guard</h3><p>Clasificación de capacidades del dispositivo y políticas energéticas coordinadas con los demás motores.</p><div class="benefit">Valor esperado: optimización por segmento de hardware y mejoras de autonomía sujetas a benchmarks.</div></article>
-          <article class="tech"><div class="symbol">⇄</div><h3>Touch &amp; Connect + Home</h3><p>Conectividad por proximidad autorizada, Cygnus Home y Task Space; la conexión física sigue pendiente de validación.</p><div class="benefit">Valor esperado: una experiencia reconocible y oportunidades futuras de expansión multidispositivo.</div></article>
+          <article class="tech"><div class="symbol">▦</div><h3>AHC + Battery Guard</h3><p>Clasificación de las capacidades del dispositivo y estado de protección de la batería integrado en el sistema.</p><div class="benefit">Valor esperado: optimización por segmento de hardware y mejoras de autonomía sujetas a benchmarks.</div></article>
+          <article class="tech"><div class="symbol">⇄</div><h3>Touch &amp; Connect + Quari Store</h3><p>Emparejamiento al tocar dispositivos (base validada en emulador) y una tienda curada con catálogo firmado digitalmente.</p><div class="benefit">Valor esperado: una experiencia reconocible y expansión futura a PC, relojes, auriculares, auto y TV.</div></article>
         </div>
-        <p class="technical"><strong>Estado de validación:</strong> AOT, Vulkan y el objetivo de 60 fps no se presentan como una certificación de desempeño en todos los equipos. La seguridad de tipo Zero Trust es una orientación de arquitectura, no una garantía de protección absoluta.</p>
+        <p class="technical"><strong>Estado de validación:</strong> los módulos indicados están validados en emulador. Las mejoras de rendimiento y autonomía se medirán en hardware real a partir de la versión 1.1. Ninguna arquitectura de seguridad garantiza una protección absoluta.</p>
       </div>
     </section>
 
@@ -166,9 +167,9 @@
         <h2 id="roadmap-titulo">De la validación técnica a la oportunidad comercial.</h2>
         <p class="intro">Hitos de desarrollo y objetivos previstos. Las fechas pueden variar según los resultados de compilación, estabilidad, seguridad y pruebas en dispositivos físicos.</p>
         <div class="timeline">
-          <article class="milestone"><div class="date">Q1–Q2 2026</div><h3>Core y base arquitectónica</h3><p>Fundamentos del núcleo Cygnus OS y diseño de arquitectura AOT. La integración y el alcance de producción continúan bajo evaluación.</p><span class="pill">Base técnica</span></article>
-          <article class="milestone featured"><div class="date">Marzo 2027 · Previsto</div><h3>Beta abierta y gratuita</h3><p>Objetivo: segunda quincena de marzo: adopción comunitaria, pruebas en emulador (hardware real a partir de la versión 1.1) y validación progresiva de Privacy Shield. Motor ACE bajo ASHB Proprietary.</p><span class="pill">Próximo hito</span></article>
-          <article class="milestone"><div class="date">Desde mayo 2027</div><h3>Expansión del ecosistema</h3><p>Integraciones prioritarias, evolución de la experiencia y ampliación de compatibilidades según evidencia de uso.</p><span class="pill">Planificado</span></article>
+          <article class="milestone"><div class="date">2026 · En curso</div><h3>Base del sistema</h3><p>Servicios propios, seguridad de mínimo privilegio y los primeros 8 módulos validados y congelados en emulador.</p><span class="pill">Base técnica</span></article>
+          <article class="milestone featured"><div class="date">Marzo 2027 · Previsto</div><h3>Beta abierta y gratuita</h3><p>Objetivo: segunda quincena de marzo. Imagen para emulador con los módulos principales, el tema Cygnus y Quari Store; hardware real a partir de la versión 1.1.</p><span class="pill">Próximo hito</span></article>
+          <article class="milestone"><div class="date">Mayo–julio 2027</div><h3>Versiones 1.1 y 1.2</h3><p>Nueva pantalla de bloqueo y notificaciones, rediseño de la interfaz y primer dispositivo físico, en evaluación.</p><span class="pill">Planificado</span></article>
           <article class="milestone"><div class="date">2027 · Etapa posterior</div><h3>Relaciones con fabricantes</h3><p>Exploración de alianzas estratégicas con OEMs emergentes tras demostrar estabilidad, soporte y viabilidad de integración.</p><span class="pill">Objetivo estratégico</span></article>
         </div>
       </div>
@@ -184,12 +185,12 @@
           <article class="biz-card"><h3>Licencias tecnológicas</h3><p>Motor ACE y determinados módulos propietarios como posibles activos licenciables. Condiciones, alcance y precios sujetos a acuerdos.</p></article>
           <article class="biz-card"><h3>Canal OEM</h3><p>Posibles acuerdos de integración, optimización o adaptación con fabricantes emergentes, una vez demostrada la preparación técnica.</p></article>
         </div>
-        <div class="licence"><div><div class="bullet-label">Estrategia de propiedad intelectual</div><h3 style="font-size:26px;margin:0 0 10px">ASHB Proprietary</h3><p><strong>Protección de tecnología diferencial:</strong> motores propietarios como ACE y módulos de seguridad que se desarrollen bajo esa licencia, respetando las obligaciones de los componentes de código abierto subyacentes.</p></div><div><p>El proyecto contempla componentes abiertos y otros propietarios. La política de distribución de Privacy Shield, los términos de auditoría, las dependencias y los límites de licenciamiento deben documentarse antes de la beta pública. No se afirma que todas las capas puedan mantenerse cerradas.</p></div></div>
+        <div class="licence"><div><div class="bullet-label">Estrategia de propiedad intelectual</div><h3 style="font-size:26px;margin:0 0 10px">ASHB Proprietary</h3><p><strong>Protección de tecnología diferencial:</strong> motores propietarios como ACE y módulos de seguridad que se desarrollen bajo esa licencia, respetando las obligaciones de los componentes de código abierto subyacentes.</p></div><div><p>Los componentes de AOSP conservan sus licencias de código abierto (Apache 2.0 y otras; el kernel Linux, GPL-2.0). Los términos completos están en el <a href="https://github.com/ashb-official/Cygnus_OS/blob/main/LICENSE" target="_blank" rel="noopener noreferrer" style="text-decoration:underline">archivo de licencia</a> del repositorio.</p></div></div>
       </div>
     </section>
 
     <section class="section" id="desarrollo" aria-labelledby="desarrollo-titulo">
-      <div class="wrap vision"><div class="kicker">05 / Estado y visión</div><h2 id="desarrollo-titulo">Desarrollo muy avanzado. Validación antes de escala.</h2><p>Cygnus OS se encuentra en una fase avanzada de desarrollo, con integración, compilación y pruebas técnicas en curso. El objetivo de lanzar una beta abierta a mediados de febrero de 2027 depende de superar las validaciones de seguridad, estabilidad, compatibilidad y desempeño sobre hardware real.</p><p>La visión contempla un ecosistema de móviles y, en fases posteriores, otros formatos de dispositivos. Las asociaciones con fabricantes son una oportunidad a explorar, no acuerdos actualmente anunciados.</p><div class="actions" style="justify-content:flex-start"><a class="btn secondary" href="https://github.com/ashb-official/Cygnus_OS" target="_blank" rel="noopener noreferrer">Repositorio del proyecto ↗</a><a class="btn secondary" href="#inicio">Volver al inicio ↑</a></div><p class="fine">Desarrollado por <strong>ASHB Technology</strong>. Esta página presenta la estrategia de producto, no una oferta pública de inversión ni resultados financieros auditados.</p></div>
+      <div class="wrap vision"><div class="kicker">05 / Estado y visión</div><h2 id="desarrollo-titulo">Desarrollo muy avanzado. Validación antes de escala.</h2><p>Cygnus OS se encuentra en una fase avanzada de desarrollo, con integración, compilación y pruebas técnicas en curso. El objetivo es lanzar la beta abierta, en imagen para emulador, en la segunda quincena de marzo de 2027, tras superar las validaciones de seguridad, estabilidad y compatibilidad. Las pruebas sobre hardware real comienzan con la versión 1.1.</p><p>La visión contempla un ecosistema de móviles y, en fases posteriores, otros formatos de dispositivos. Las asociaciones con fabricantes son una oportunidad a explorar, no acuerdos actualmente anunciados.</p><div class="actions" style="justify-content:flex-start"><a class="btn secondary" href="https://github.com/ashb-official/Cygnus_OS" target="_blank" rel="noopener noreferrer">Repositorio del proyecto ↗</a><a class="btn secondary" href="#inicio">Volver al inicio ↑</a></div><p class="fine">Desarrollado por <strong>ASHB Technology</strong>. Esta página presenta la estrategia de producto, no una oferta pública de inversión ni resultados financieros auditados.</p></div>
     </section>
   </main>
   <footer><div class="wrap foot"><span>© 2026 Gabriel Alexander Sharp Brizuela · Cygnus OS</span><span>Beta prevista: marzo de 2027 · En desarrollo avanzado</span><a href="https://github.com/ashb-official/Cygnus_OS" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></footer>

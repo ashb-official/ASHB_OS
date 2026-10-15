@@ -1,6 +1,12 @@
+<p align="center">
+  <img src="assets/logo-640.png" width="260" alt="Logotipo de Cygnus OS">
+</p>
+
 # Cygnus OS
 
 **Sistema operativo móvil basado en Android (AOSP 13), desarrollado en Paraguay.**
+
+[Sitio web](https://ashb-official.github.io/Cygnus_OS/) · [Pitch deck (PDF)](docs/Cygnus_OS_Pitch_Deck_2026.pdf) · [Licencia](LICENSE)
 
 > **Estado:** en desarrollo activo. Beta pública prevista para **marzo de 2027** (imagen para emulador).
 > Este repositorio es la presentación pública del proyecto. El código fuente de Cygnus OS es propietario y no se publica aquí.
