@@ -1,197 +1,127 @@
 =======================================================================
-ACUERDO DE LICENCIA DE USUARIO FINAL Y TÉRMINOS DEL ECOSISTEMA CYGNUS OS
-Copyright (C) 2026 Gabriel Alexander Sharp Brizuela. 
+ACUERDO DE LICENCIA Y TÉRMINOS DEL ECOSISTEMA CYGNUS OS
+Copyright (C) 2026 Gabriel Alexander Sharp Brizuela.
 Todos los derechos reservados sobre los componentes propietarios.
 =======================================================================
 
-El presente documento establece el modelo de arquitectura legal híbrida 
-que rige la distribución, uso y comercialización del sistema operativo 
-Cygnus OS. Este modelo está diseñado para facilitar la adopción masiva 
-(Freemium/Beta Abierta) protegiendo simultáneamente los secretos 
-comerciales en entornos corporativos (B2B) y de fabricación (OEM).
-
-Dependiendo de la capa del sistema y el componente específico, aplican 
-diferentes términos legales detallados a continuación:
-
------------------------------------------------------------------------
-1. NÚCLEO Y SISTEMA BASE (Apache License 2.0)
------------------------------------------------------------------------
-El código fuente de la arquitectura base derivada de AOSP (Android Open 
-Source Project), el orquestador raíz y los componentes de integración 
-genéricos del sistema se distribuyen bajo la licencia permisiva 
-Apache License, Versión 2.0. 
-
-Se permite su uso, modificación, distribución y sublicenciamiento 
-única y estrictamente conforme a los términos y condiciones de dicha 
-licencia, cuyo texto íntegro se adjunta al final de este documento.
+El presente documento establece el modelo de licencias que rige la
+distribución, el uso y la comercialización del sistema operativo
+Cygnus OS y del contenido de este repositorio. Cygnus OS combina
+componentes de código abierto de terceros con componentes propietarios
+de su autor. Según la capa del sistema y el componente, aplican los
+términos siguientes. En caso de duda sobre un archivo concreto,
+prevalece la cabecera de licencia (SPDX) de ese archivo.
 
 -----------------------------------------------------------------------
-2. MÓDULOS CORE "DEEP TECH" Y PROPIEDAD INTELECTUAL 
-   (ASHB Proprietary - Código Cerrado)
+1. SISTEMA BASE DE CÓDIGO ABIERTO (AOSP y otros proyectos)
 -----------------------------------------------------------------------
-Los siguientes módulos estratégicos y motores de rendimiento son de 
-desarrollo propio, representan propiedad intelectual exclusiva y secretos 
-comerciales del autor (Gabriel Alexander Sharp Brizuela). Quedan 
-ESTRICTAMENTE excluidos de cualquier licencia de código abierto 
-(incluyendo Apache, GPL, MIT, entre otras):
+Cygnus OS se basa en el Android Open Source Project (AOSP). Los
+componentes de AOSP y de otros proyectos de código abierto incluidos en
+el sistema conservan sus licencias originales, principalmente la
+Apache License 2.0, cuyo texto completo figura en el archivo
+LICENSE-APACHE-2.0 de este repositorio.
 
-  - Motor ACE (Advanced Core Engine)
-  - Cygnus Privacy Shield
-  - Adaptive Hardware Classifier (AHC)
-  - Battery Guard
-  - Game Turbo
-  - Machine Explorer
-  - Módulos de Microaislamiento y Políticas Zero-Trust
-  - AOT Wrappers (Optimizador Ahead-Of-Time)
-  - OTA Engine (Over-The-Air Update Engine)
-  - ASHB Blackbox (Auditoría Forense)
-  - SystemUI y Settings Avanzados Propietarios
+El kernel Linux se distribuye bajo la GNU General Public License,
+versión 2 (GPL-2.0). Su código fuente correspondiente está disponible a
+través de las fuentes oficiales de AOSP o se facilitará a solicitud,
+conforme a dicha licencia.
 
-El código fuente de estos componentes NO es público. Se distribuyen en 
-el ecosistema única y exclusivamente como binarios compilados y ofuscados 
-(archivos ejecutables y bibliotecas compartidas .so) alojados de forma 
-segura en la partición `/system_ext` u otras particiones protegidas.
+Las modificaciones del autor integradas directamente en componentes de
+AOSP (por ejemplo, adaptaciones de la interfaz del sistema o de los
+Ajustes) se rigen por la licencia del componente modificado, salvo que
+la cabecera del archivo indique otra cosa.
 
-2.1. Derechos del Usuario Final (Uso No Comercial y Beta Abierta):
-Se otorga a los usuarios finales (consumidores) una licencia limitada, 
-no exclusiva, intransferible, revocable y gratuita para la instalación, 
-ejecución y uso personal de estos módulos, única y exclusivamente como 
-parte integral e inseparable del sistema operativo Cygnus OS en sus 
-dispositivos personales.
-
-2.2. Restricciones Estrictas de Propiedad (B2B y OEM):
-Bajo ninguna circunstancia esta licencia otorga derechos de explotación 
-comercial. Queda terminantemente prohibido:
-  a) La extracción, clonación o separación de los módulos de la partición 
-     `/system_ext` para su uso en hardware de terceros, otras ROMs o 
-     sistemas operativos derivados.
-  b) La ingeniería inversa, descompilación, desensamblaje o intentos de 
-     acceso al código fuente de los binarios protegidos.
-  c) La preinstalación (OEM), redistribución corporativa, sublicenciamiento 
-     o comercialización de Cygnus OS o sus módulos sin un acuerdo formal 
-     de licencias (Licensing) y regalías (Royalties) firmado por escrito 
-     con el autor.
+La lista de licencias de terceros incluidas en cada versión de
+Cygnus OS se entrega junto con el sistema.
 
 -----------------------------------------------------------------------
-3. CAPA DE ADAPTACIÓN DE CHIPS Y HARDWARE (Vendor Layer)
+2. COMPONENTES PROPIETARIOS DE CYGNUS OS
+   (ASHB Proprietary - Código cerrado)
 -----------------------------------------------------------------------
-Los controladores de hardware, firmware base, bibliotecas HAL (Hardware 
-Abstraction Layer) y "vendor blobs" ubicados habitualmente en las 
-particiones `/vendor` o `/odm` pertenecen a sus respectivos fabricantes 
-de silicio (ej. Qualcomm, MediaTek, etc.) o fabricantes del dispositivo. 
-Cygnus OS no reclama propiedad sobre ellos; estos se distribuyen bajo 
-los términos de licencia dictados por dichas entidades (EULAs propietarios 
-de terceros).
+Los componentes desarrollados por el autor para Cygnus OS son propiedad
+intelectual exclusiva y secreto comercial de Gabriel Alexander Sharp
+Brizuela, y quedan ESTRICTAMENTE excluidos de cualquier licencia de
+código abierto (incluidas Apache, GPL, MIT y otras). Incluyen, sin
+limitarse a ellos:
+
+  - Servicios del sistema: System Control, Game Turbo, Battery Guard,
+    Adaptive Hardware Classifier (AHC), Motor ACE (Advanced Core
+    Engine), Touch & Connect y Experience Ultra.
+  - Aplicaciones del sistema: Control Center, Quari Store, Welcome y
+    el Asistente de configuración de Cygnus OS.
+  - Módulos en desarrollo o planificados, entre ellos Cygnus Privacy
+    Shield, Task Space, Machine Explorer, OTA Engine, AOT Wrappers,
+    ASHB Blackbox y los módulos de microaislamiento y políticas
+    Zero-Trust.
+
+El código fuente de estos componentes NO es público. Se distribuyen
+únicamente en forma compilada (binarios, bibliotecas y paquetes de
+aplicación) como parte de las imágenes de Cygnus OS, en la partición
+/system_ext u otras particiones del sistema.
+
+2.1. Derechos del usuario final (uso no comercial y Beta abierta):
+Se otorga a los usuarios finales una licencia limitada, no exclusiva,
+intransferible, revocable y gratuita para instalar, ejecutar y usar
+estos componentes de forma personal, única y exclusivamente como parte
+integral e inseparable de Cygnus OS en sus dispositivos.
+
+2.2. Restricciones (uso comercial, B2B y OEM):
+Esta licencia no otorga derechos de explotación comercial. Queda
+prohibido, salvo autorización previa y por escrito del autor:
+  a) Extraer, copiar o separar estos componentes del sistema para
+     usarlos en hardware de terceros, otras ROMs o sistemas derivados.
+  b) Realizar ingeniería inversa, descompilar o desensamblar estos
+     componentes, salvo en la medida en que la ley aplicable lo
+     permita expresamente sin posibilidad de renuncia.
+  c) Preinstalar (OEM), redistribuir, sublicenciar o comercializar
+     Cygnus OS o sus componentes sin un acuerdo formal de licencia y
+     regalías firmado por escrito con el autor.
 
 -----------------------------------------------------------------------
-4. EXENCIÓN DE RESPONSABILIDAD (Disclaimer of Warranty)
+3. CAPA DE HARDWARE DE TERCEROS (Vendor Layer)
 -----------------------------------------------------------------------
-EL SOFTWARE (INCLUYENDO LAS VERSIONES DE BETA ABIERTA) SE PROPORCIONA 
-"TAL CUAL" (AS IS), SIN GARANTÍA DE NINGÚN TIPO, EXPRESA O IMPLÍCITA, 
-INCLUYENDO PERO NO LIMITADO A GARANTÍAS DE COMERCIALIZACIÓN, IDONEIDAD 
-PARA UN PROPÓSITO PARTICULAR Y NO INFRACCIÓN. EN NINGÚN CASO EL AUTOR 
-O LOS TITULARES DEL COPYRIGHT SERÁN RESPONSABLES POR CUALQUIER RECLAMO, 
-DAÑO, PÉRDIDA DE DATOS O RESPONSABILIDAD, YA SEA EN UNA ACCIÓN DE 
-CONTRATO, AGRAVIO O CUALQUIER OTRO MOTIVO, QUE SURJA DE O EN CONEXIÓN 
-CON EL SOFTWARE O EL USO U OTROS TRATOS EN EL SOFTWARE.
+Los controladores de hardware, el firmware, las bibliotecas HAL y los
+"vendor blobs" ubicados habitualmente en las particiones /vendor u
+/odm pertenecen a sus respectivos fabricantes de silicio o de
+dispositivos. Cygnus OS no reclama propiedad sobre ellos; se rigen por
+los términos de licencia de dichos fabricantes.
 
+-----------------------------------------------------------------------
+4. MARCAS
+-----------------------------------------------------------------------
+"Cygnus OS", "Quari", "ASHB" y sus logotipos son marcas y signos
+distintivos de su titular. Ninguna licencia descrita en este documento,
+incluida la Apache License 2.0, concede derecho alguno a usarlos.
 
-=======================================================================
-APÉNDICE: TEXTO DE LA LICENCIA APACHE 2.0 
-(Aplica SOLO a los componentes descritos en la Sección 1)
-=======================================================================
+-----------------------------------------------------------------------
+5. CONTENIDO DE ESTE REPOSITORIO
+-----------------------------------------------------------------------
+La página web, los textos, las imágenes, los logotipos y los documentos
+de este repositorio (incluidas las presentaciones en PDF) son
+(C) 2026 Gabriel Alexander Sharp Brizuela, con todos los derechos
+reservados. Se permite consultarlos y enlazarlos; no se permite
+reproducirlos, modificarlos ni redistribuirlos sin autorización previa
+y por escrito.
 
-                                 Apache License
-                           Version 2.0, January 2004
-                        http://www.apache.org/licenses/
+-----------------------------------------------------------------------
+6. EXENCIÓN DE RESPONSABILIDAD (Disclaimer of Warranty)
+-----------------------------------------------------------------------
+EL SOFTWARE (INCLUIDAS LAS VERSIONES BETA) SE PROPORCIONA "TAL CUAL"
+(AS IS), SIN GARANTÍA DE NINGÚN TIPO, EXPRESA O IMPLÍCITA, INCLUIDAS,
+ENTRE OTRAS, LAS GARANTÍAS DE COMERCIABILIDAD, IDONEIDAD PARA UN
+PROPÓSITO PARTICULAR Y NO INFRACCIÓN. EN NINGÚN CASO EL AUTOR O LOS
+TITULARES DEL COPYRIGHT SERÁN RESPONSABLES DE RECLAMACIONES, DAÑOS,
+PÉRDIDAS DE DATOS U OTRAS RESPONSABILIDADES, YA SEA EN UNA ACCIÓN
+CONTRACTUAL, EXTRACONTRACTUAL O DE OTRO TIPO, QUE SURJAN DEL SOFTWARE,
+DE SU USO O DE OTRAS OPERACIONES CON ÉL, EN LA MEDIDA MÁXIMA PERMITIDA
+POR LA LEY APLICABLE.
 
-   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+-----------------------------------------------------------------------
+7. LEY APLICABLE Y CONTACTO
+-----------------------------------------------------------------------
+Este documento se rige por las leyes de la República del Paraguay.
+Cualquier controversia se someterá a los tribunales competentes de la
+ciudad de Asunción.
 
-   1. Definitions.
-      "License" shall mean the terms and conditions for use, reproduction,
-      and distribution as defined by Sections 1 through 9 of this document.
-      "Licensor" shall mean the copyright owner or entity authorized by
-      the copyright owner that is granting the License.
-      "Legal Entity" shall mean the union of the acting entity and all
-      other entities that control, are controlled by, or are under common
-      control with that entity. 
-      "You" (or "Your") shall mean an individual or Legal Entity
-      exercising permissions granted by this License.
-      "Source" form shall mean the preferred form for making modifications,
-      including but not limited to software source code, documentation
-      source, and configuration files.
-      "Object" form shall mean any form resulting from mechanical
-      transformation or translation of a Source form.
-      "Work" shall mean the work of authorship, whether in Source or
-      Object form, made available under the License, as indicated by a
-      copyright notice that is included in or attached to the work.
-      "Derivative Works" shall mean any work, whether in Source or Object
-      form, that is based on (or derived from) the Work and for which the
-      editorial revisions, annotations, elaborations, or other modifications
-      represent, as a whole, an original work of authorship. 
-      "Contribution" shall mean any work of authorship, including
-      the original version of the Work and any modifications or additions
-      to that Work or Derivative Works thereof, that is intentionally
-      submitted to Licensor for inclusion in the Work by the copyright owner.
-
-   2. Grant of Copyright License. Subject to the terms and conditions of
-      this License, each Contributor hereby grants to You a perpetual,
-      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
-      copyright license to reproduce, prepare Derivative Works of,
-      publicly display, publicly perform, sublicense, and distribute the
-      Work and such Derivative Works in Source or Object form.
-
-   3. Grant of Patent License. Subject to the terms and conditions of
-      this License, each Contributor hereby grants to You a perpetual,
-      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
-      (except as stated in this section) patent license to make, have made,
-      use, offer to sell, sell, import, and otherwise transfer the Work.
-
-   4. Redistribution. You may reproduce and distribute copies of the
-      Work or Derivative Works thereof in any medium, with or without
-      modifications, and in Source or Object form, provided that You
-      meet the following conditions:
-      (a) You must give any other recipients of the Work or
-          Derivative Works a copy of this License; and
-      (b) You must cause any modified files to carry prominent notices
-          stating that You changed the files; and
-      (c) You must retain, in the Source form of any Derivative Works
-          that You distribute, all copyright, patent, trademark, and
-          attribution notices from the Source form of the Work; and
-      (d) If the Work includes a "NOTICE" text file as part of its
-          distribution, then any Derivative Works that You distribute must
-          include a readable copy of the attribution notices contained
-          within such NOTICE file.
-
-   5. Submission of Contributions. Unless You explicitly state otherwise,
-      any Contribution intentionally submitted for inclusion in the Work
-      by You to the Licensor shall be under the terms and conditions of
-      this License, without any additional terms or conditions.
-
-   6. Trademarks. This License does not grant permission to use the trade
-      names, trademarks, service marks, or product names of the Licensor.
-
-   7. Disclaimer of Warranty. Unless required by applicable law or
-      agreed to in writing, Licensor provides the Work (and each
-      Contributor provides its Contributions) on an "AS IS" BASIS,
-      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
-      implied, including, without limitation, any warranties or conditions
-      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
-      PARTICULAR PURPOSE. 
-
-   8. Limitation of Liability. In no event and under no legal theory,
-      whether in tort (including negligence), contract, or otherwise,
-      unless required by applicable law (such as deliberate and grossly
-      negligent acts) or agreed to in writing, shall any Contributor be
-      liable to You for damages, including any direct, indirect, special,
-      incidental, or consequential damages of any character arising as a
-      result of this License or out of the use or inability to use the
-      Work.
-
-   9. Accepting Warranty or Additional Liability. While redistributing
-      the Work or Derivative Works thereof, You may choose to offer,
-      and charge a fee for, acceptance of support, warranty, indemnity,
-      or other liability obligations and/or rights consistent with this
-      License. 
-
-   END OF TERMS AND CONDITIONS
+Para acuerdos de licencia, uso comercial u OEM, contacte al autor a
+través de la web oficial del proyecto.
